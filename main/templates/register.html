@@ -1,0 +1,18 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.username.label }}
+    {{ form.username }}
+
+    {{ form.email.label }}
+    {{ form.email }}
+
+    {{ form.password1.label }}
+    {{ form.password1 }}
+    {{ form.help_text }}
+
+    {{ form.password2.label }}
+    {{ form.password2 }}
+    <input type="submit" value="Register">
+    {{ form.errors }}
+</form>
+<p>You have already an account? <a href="{% url 'login' %}">Login</a></p>

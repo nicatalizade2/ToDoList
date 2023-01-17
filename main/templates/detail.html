@@ -1,0 +1,8 @@
+<a href="{% url 'home' %}"> Go home </a>
+
+<h1>Tasks Detail</h1>
+<p>{{ tasks.description }}</p>
+{% if tasks.image %}
+<img src="{{ tasks.image.url }}" alt="" width="200" height="200">
+{% endif %}
+

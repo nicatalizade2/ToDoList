@@ -1,0 +1,13 @@
+{#{% if user.is_authenticated %}#}
+{#    {% if user.id == tasks.user.id %}#}
+       <form action="" method="post">
+           {% csrf_token %}
+           <a href="{% url 'home' %}"> Go home </a>
+
+           <p>Are you sure want to delete this task</p>
+           <input type="submit" value="Yes i am sure">
+       </form>
+{#        {% else %}#}
+{#        <p>You don't have such a list to delete </p>#}
+{#    {% endif %}#}
+{#{% endif %}#}
